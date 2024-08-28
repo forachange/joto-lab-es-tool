@@ -1,0 +1,54 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<GridPane fx:controller="com.joto.lab.es.tool.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <GridPane hgap="10" vgap="10">
+        <padding>
+            <Insets right="10" />
+        </padding>
+
+        <Label GridPane.halignment="RIGHT" GridPane.columnIndex="0"  text="MySQL" />
+
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.columnIndex="0" text="URL" />
+        <TextField fx:id="tfUrl" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="700" promptText="jdbc:mysql://&lt;ip&gt;:&lt;port&gt;/&lt;db&gt;?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Shanghai"/>
+
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.columnIndex="0" text="User" />
+        <TextField fx:id="tfUser" GridPane.rowIndex="2" GridPane.columnIndex="1" promptText="MySQL Login User" />
+
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.columnIndex="0" text="Password" />
+        <PasswordField fx:id="pfPassword"  GridPane.rowIndex="3" GridPane.columnIndex="1" promptText="MySQL Password" />
+
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.columnIndex="0" text="Project" />
+
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.columnIndex="0" text="Author" />
+        <TextField fx:id="tfAuthor" GridPane.rowIndex="5" GridPane.columnIndex="1" promptText="Author" />
+
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.columnIndex="0" text="Project Path" />
+        <FlowPane GridPane.rowIndex="6" GridPane.columnIndex="1" hgap="30" >
+            <TextField fx:id="tfProjectPath" editable="false" prefWidth="600" />
+            <Button text="项目路径" onAction="#choose" />
+        </FlowPane>
+
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.columnIndex="0" text="Entity Package" />
+        <TextField fx:id="tfEntityPackage" GridPane.rowIndex="7" GridPane.columnIndex="1" promptText="实体包名称" />
+
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.columnIndex="0" text="Service Package" />
+        <TextField fx:id="tfServicePackage" GridPane.rowIndex="8" GridPane.columnIndex="1" promptText="服务包名称" />
+
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.columnIndex="0" text="Tables" />
+        <TextArea fx:id="taTables" GridPane.rowIndex="9" GridPane.columnIndex="1" prefHeight="90" wrapText="true" promptText="需要转换的表，使用分号';'分割" />
+
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.columnIndex="0" text="Domains" />
+        <TextArea fx:id="taDomains" GridPane.rowIndex="10" GridPane.columnIndex="1" prefHeight="90" wrapText="true" />
+
+        <FlowPane GridPane.rowIndex="11" GridPane.columnIndex="1" hgap="30" >
+            <Button text="Generate" onMouseClicked="#generate" />
+            <Button text="Clear" onMouseClicked="#clear" />
+        </FlowPane>
+
+    </GridPane>
+
+</GridPane>
