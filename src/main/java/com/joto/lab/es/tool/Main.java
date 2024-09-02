@@ -21,7 +21,7 @@ public class Main  extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Joto Es Tool 1.0");
         primaryStage.resizableProperty().setValue(Boolean.FALSE);
-        primaryStage.setScene(new Scene(root, 820, 540));
+        primaryStage.setScene(new Scene(root, 820, 570));
         primaryStage.show();
     }
 }

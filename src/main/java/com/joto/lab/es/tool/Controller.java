@@ -44,6 +44,7 @@ public class Controller {
     public TextField tfProjectPath;
     public TextField tfEntityPackage;
     public TextField tfServicePackage;
+    public TextField tfDtoPackage;
     public TextField tfAuthor;
 
     public static void openDir(String outDir) throws IOException {
@@ -71,6 +72,7 @@ public class Controller {
         checkTextField(tfAuthor, "Author 不能为空");
         checkTextField(tfEntityPackage, "Entity Package 不能为空");
         checkTextField(tfServicePackage, "Service Package 不能为空");
+        checkTextField(tfDtoPackage, "Dto Package 不能为空");
 
         if (StrUtil.isBlank(pfPassword.getText())) {
             showWindowAlert("Password 不能为空", Alert.AlertType.WARNING);
@@ -100,6 +102,7 @@ public class Controller {
         config.setAuthor(tfAuthor.getText());
         config.setTables(taTables.getText());
         config.setDomains(taDomains.getText());
+        config.setDtoTargetPackage(tfDtoPackage.getText());
 
         try {
             MybatisGeneratorUtil.generateClassAndMapping(config, null);
@@ -171,6 +174,7 @@ public class Controller {
         tfProjectPath.clear();
         taTables.clear();
         taDomains.clear();
+        tfDtoPackage.clear();
     }
 
     void showWindowAlert(String message, Alert.AlertType alertType) {
@@ -231,6 +235,7 @@ public class Controller {
         tfProjectPath.setText(config.getTargetProject());
         taTables.setText(config.getTables());
         taDomains.setText(config.getDomains());
+        tfDtoPackage.setText(config.getDtoTargetPackage());
     }
 
 }

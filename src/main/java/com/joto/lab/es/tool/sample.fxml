@@ -38,13 +38,16 @@
         <Label GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.columnIndex="0" text="Service Package" />
         <TextField fx:id="tfServicePackage" GridPane.rowIndex="8" GridPane.columnIndex="1" promptText="服务包名称" />
 
-        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.columnIndex="0" text="Tables" />
-        <TextArea fx:id="taTables" GridPane.rowIndex="9" GridPane.columnIndex="1" prefHeight="90" wrapText="true" promptText="需要转换的表，使用分号';'分割" />
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.columnIndex="0" text="DTO Package" />
+        <TextField fx:id="tfDtoPackage" GridPane.rowIndex="9" GridPane.columnIndex="1" promptText="DTO包名称" />
 
-        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.columnIndex="0" text="Domains" />
-        <TextArea fx:id="taDomains" GridPane.rowIndex="10" GridPane.columnIndex="1" prefHeight="90" wrapText="true" />
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.columnIndex="0" text="Tables" />
+        <TextArea fx:id="taTables" GridPane.rowIndex="10" GridPane.columnIndex="1" prefHeight="90" wrapText="true" promptText="需要转换的表，使用分号';'分割" />
 
-        <FlowPane GridPane.rowIndex="11" GridPane.columnIndex="1" hgap="30" >
+        <Label GridPane.halignment="RIGHT" GridPane.rowIndex="11" GridPane.columnIndex="0" text="Domains" />
+        <TextArea fx:id="taDomains" GridPane.rowIndex="11" GridPane.columnIndex="1" prefHeight="90" wrapText="true" />
+
+        <FlowPane GridPane.rowIndex="12" GridPane.columnIndex="1" hgap="30" >
             <Button text="Generate" onMouseClicked="#generate" />
             <Button text="Clear" onMouseClicked="#clear" />
         </FlowPane>
